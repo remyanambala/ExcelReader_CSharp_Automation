@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29403.142
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReader", "ExcelReader_CSharp_Automation\ExcelReader.csproj", "{3421873C-47E2-4191-8AA1-58AF2197337E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReaderTests", "ExcelReaderTests\ExcelReaderTests.csproj", "{59EB7B53-2CAD-4C0E-BA80-8A2BD726681E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3421873C-47E2-4191-8AA1-58AF2197337E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3421873C-47E2-4191-8AA1-58AF2197337E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3421873C-47E2-4191-8AA1-58AF2197337E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3421873C-47E2-4191-8AA1-58AF2197337E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59EB7B53-2CAD-4C0E-BA80-8A2BD726681E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59EB7B53-2CAD-4C0E-BA80-8A2BD726681E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59EB7B53-2CAD-4C0E-BA80-8A2BD726681E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59EB7B53-2CAD-4C0E-BA80-8A2BD726681E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04591B7D-A614-4886-BBBA-2FE5AA9EEA2D}
+	EndGlobalSection
+EndGlobal
