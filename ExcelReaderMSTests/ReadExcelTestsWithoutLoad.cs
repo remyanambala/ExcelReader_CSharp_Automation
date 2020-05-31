@@ -13,7 +13,7 @@ namespace ExcelReaderMSTests
       
 
         [TestMethod]
-        public void TestReadValueFromExcel1()
+        public void TestReadValueFromExcel1Withoutload()
         {
             //ExcelReader.OpenExcel(dataFilePath);
             string fname = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "Fname");
@@ -21,14 +21,7 @@ namespace ExcelReaderMSTests
             string city = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "City");
             string total = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "Total");
             Console.WriteLine($"{fname} {lname} from {city} has spend {total}");
-            Assert.AreEqual("David", fname, $"First name is not correct: Expected: David, Actual: {fname}");
-            Assert.AreEqual("Copper Field", lname, $"Last name is not correct: Expected: Copper Field, Actual: {lname}");
-            Assert.AreEqual("New York", city, $"City name is not correct: Expected: New York, Actual: {city}");
-            Assert.AreEqual("1100", total, $"Total is not correct: Expected: 1100, Actual: {total}");
-
-        }
-        public void TestReadValueFromExcel2()
-        {
-        }
+         }
+       
     }
 }
