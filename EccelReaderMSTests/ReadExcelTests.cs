@@ -1,13 +1,16 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ExcelReaderTests
+namespace ExcelReaderMSTests
 {
     [TestClass]
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestReadValueFromExcel1()
+        {
+        }
+        public void TestReadValueFromExcel2()
         {
         }
     }
