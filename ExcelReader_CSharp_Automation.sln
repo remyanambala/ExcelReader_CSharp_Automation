@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReaderTests", "ExcelRe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApp", "TestApp\TestApp.csproj", "{507CFCCF-655D-4239-81ED-6B3E4FB1C7AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReaderMSTests", "EccelReaderMSTests\ExcelReaderMSTests.csproj", "{890ED52D-0B29-4617-9C52-1EBD1D60525E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReaderMSTests", "ExcelReaderMSTests\ExcelReaderMSTests.csproj", "{890ED52D-0B29-4617-9C52-1EBD1D60525E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestFiles", "TestFiles", "{8D443004-FBC3-4B00-9158-F24B03E3E0AE}"
 	ProjectSection(SolutionItems) = preProject

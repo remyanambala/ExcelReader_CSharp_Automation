@@ -6,7 +6,7 @@ using Remya.ExcelReader;
 namespace ExcelReaderMSTests
 {
     [TestClass]
-    public class ExcelReaderMSTests
+    public class ExcelReaderMSTestsWithoutLoad
     {
         public static string buildLoc = System.IO.Path.GetDirectoryName(new System.Uri(System.Reflection.Assembly.GetExecutingAssembly().CodeBase).LocalPath);
         public static readonly String dataFilePath = Path.GetFullPath(Path.Combine( buildLoc, @"..\..\..\TestFiles\", "TestExcel1.xlsx"));
@@ -15,7 +15,7 @@ namespace ExcelReaderMSTests
         [TestMethod]
         public void TestReadValueFromExcel1()
         {
-            ExcelReader.OpenExcel(dataFilePath);
+            //ExcelReader.OpenExcel(dataFilePath);
             string fname = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "Fname");
             string lname = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "Lname");
             string city = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "City");
