@@ -70,8 +70,11 @@ namespace Remya.ExcelReader
 
         public static void Load(string dataFilePath)
         {
-            DataSet result = OpenExcel(dataFilePath);
-            PopulateExcelDictionary(dataFilePath, result);
+            if (!_cache.ContainsKey(dataFilePath))
+             {
+                DataSet result = OpenExcel(dataFilePath);
+                PopulateExcelDictionary(dataFilePath, result);
+            }
         }
 
         

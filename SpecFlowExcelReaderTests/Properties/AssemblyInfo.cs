@@ -2,18 +2,18 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("ExcelReaderTests")]
+[assembly: AssemblyTitle("SpecFlowExcelReaderTests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ExcelReaderTests")]
+[assembly: AssemblyProduct("SpecFlowExcelReaderTests")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
 
-[assembly: Guid("59eb7b53-2cad-4c0e-ba80-8a2bd726681e")]
+[assembly: Guid("e7bb8f9a-9a99-4296-8d69-cdbb895291bd")]
 
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]

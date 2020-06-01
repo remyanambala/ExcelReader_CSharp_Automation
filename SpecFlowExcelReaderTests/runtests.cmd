@@ -6,7 +6,7 @@
     echo "MSBuild is not in your PATH. Please use a developer command prompt!"
     goto :end
 ) ELSE (
-    MSBuild.exe "ExcelReaderTests.csproj"
+    MSBuild.exe "SpecFlowExcelReaderTests.csproj"
 )
 
 @if ERRORLEVEL 1 goto end

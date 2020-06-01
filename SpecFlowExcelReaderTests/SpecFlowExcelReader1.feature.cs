@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace ExcelReaderTests
+namespace SpecFlowExcelReaderTests
 {
     using TechTalk.SpecFlow;
     using System;
@@ -19,7 +19,7 @@ namespace ExcelReaderTests
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("ExcelReader", Description="\tAs an user\r\n\tI want to read data from a excel sheet", SourceFile="ExcelReader.feature", SourceLine=0)]
+    [TechTalk.SpecRun.FeatureAttribute("ExcelReader", Description="\tAs an user\r\n\tI want to read data from a excel sheet", SourceFile="SpecFlowExcelReader1.feature", SourceLine=0)]
     public partial class ExcelReaderFeature
     {
         
@@ -27,7 +27,7 @@ namespace ExcelReaderTests
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "ExcelReader.feature"
+#line 1 "SpecFlowExcelReader1.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
@@ -70,14 +70,16 @@ namespace ExcelReaderTests
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Read a column data from excel sheet", new string[] {
-                "mytag"}, SourceLine=5)]
-        public virtual void ReadAColumnDataFromExcelSheet()
+        public virtual void ReadAColumnDataFromExcelSheet(string fileName, string sheetName, string rowNumber, string columnName, string result, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "mytag"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Read a column data from excel sheet", null, new string[] {
-                        "mytag"});
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Read a column data from excel sheet", null, @__tags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -99,19 +101,52 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
- testRunner.Given("I have entered the excel path", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("I have loaded the excel using {0}", fileName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
- testRunner.And("I have entered the row and column header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When(string.Format("I pass {0} and {1} and {2} to read", sheetName, rowNumber, columnName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
- testRunner.When("I press submit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 10
- testRunner.Then("the result should be shown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("the result should be {0}", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Read a column data from excel sheet, Variant 0", new string[] {
+                "mytag"}, SourceLine=12)]
+        public virtual void ReadAColumnDataFromExcelSheet_Variant0()
+        {
+#line 6
+this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "0", "Fname", "David", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Read a column data from excel sheet, Variant 1", new string[] {
+                "mytag"}, SourceLine=12)]
+        public virtual void ReadAColumnDataFromExcelSheet_Variant1()
+        {
+#line 6
+this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "0", "Lname", "Copper Field", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Read a column data from excel sheet, Variant 2", new string[] {
+                "mytag"}, SourceLine=12)]
+        public virtual void ReadAColumnDataFromExcelSheet_Variant2()
+        {
+#line 6
+this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "0", "City", "New York", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Read a column data from excel sheet, Variant 3", new string[] {
+                "mytag"}, SourceLine=12)]
+        public virtual void ReadAColumnDataFromExcelSheet_Variant3()
+        {
+#line 6
+this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "0", "Total", "1100", ((string[])(null)));
+#line hidden
         }
         
         [TechTalk.SpecRun.TestRunCleanup()]
