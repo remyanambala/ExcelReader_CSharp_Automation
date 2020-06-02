@@ -118,7 +118,7 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void ReadAColumnDataFromExcelSheet_Variant0()
         {
 #line 6
-this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "0", "Fname", "David", ((string[])(null)));
+this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "1", "Fname", "David", ((string[])(null)));
 #line hidden
         }
         
@@ -127,7 +127,7 @@ this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "0", "Fname", 
         public virtual void ReadAColumnDataFromExcelSheet_Variant1()
         {
 #line 6
-this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "0", "Lname", "Copper Field", ((string[])(null)));
+this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "1", "Lname", "Copper Field", ((string[])(null)));
 #line hidden
         }
         
@@ -136,7 +136,7 @@ this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "0", "Lname", 
         public virtual void ReadAColumnDataFromExcelSheet_Variant2()
         {
 #line 6
-this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "0", "City", "New York", ((string[])(null)));
+this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "1", "City", "New York", ((string[])(null)));
 #line hidden
         }
         
@@ -145,7 +145,7 @@ this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "0", "City", "
         public virtual void ReadAColumnDataFromExcelSheet_Variant3()
         {
 #line 6
-this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "0", "Total", "1100", ((string[])(null)));
+this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "1", "Total", "1100", ((string[])(null)));
 #line hidden
         }
         
