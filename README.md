@@ -16,4 +16,6 @@ Functions:
   Function: Loads the file if already not loaded. Returns the row count for column name
   return: row count as int
 
-
+Project includes unit tests for the library created using MSTest and Specflow
+ExcelReaderMSTests => MS Test unit tests
+SpecFlowExcelReaderTests => Spec flow unit tests
