@@ -16,4 +16,4 @@ ExcelDataReader - https://github.com/ExcelDataReader/ExcelDataReader
 
 Project includes unit tests for the library created using MSTest and Specflow.    
 ExcelReaderMSTests => MS Test unit tests    
-SpecFlowExcelReaderTests => Spec flow unit tests
+SpecFlowExcelReaderTests => Specflow (BDD) unit tests

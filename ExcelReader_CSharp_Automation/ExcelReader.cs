@@ -14,9 +14,7 @@ namespace Remya.ExcelReader
        
             private static IDictionary<string, ExcelDocData> _cache;
 
-            private string filePath { get; set; }
-
-            static ExcelReader()
+           static ExcelReader()
             {
                 _cache = new Dictionary<string, ExcelDocData>();
 
@@ -57,7 +55,7 @@ namespace Remya.ExcelReader
                 {
                     Load(filepath);
                 }
-                //Retriving Data 
+                //Getting row count 
                 int data = _cache[filepath].sheetData[sheetName].Rows.Count;
 
                 return data;
@@ -87,8 +85,10 @@ namespace Remya.ExcelReader
                 {
                     Load(filepath);
                 }
-                //Retriving Data 
-                string data = _cache[filepath].sheetData[sheetName].Rows[rowNumber][columnName].ToString();
+
+                //First data row corresponds to index 0, to get row 1, do rowNumber -1
+                //Retrieving Data 
+                string data = _cache[filepath].sheetData[sheetName].Rows[rowNumber-1][columnName].ToString();
                              
                 return data;
             }

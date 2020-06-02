@@ -17,10 +17,10 @@ namespace ExcelReaderMSTests
         {
             dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"..\..\..\TestFiles\", "TestExcel1.xlsx"));
             ExcelReader.Load(dataFilePath);
-            string fname = ExcelReader.ReadData(dataFilePath, "Purchase", 0, "Fname");
-            string lname = ExcelReader.ReadData(dataFilePath, "Purchase", 0, "Lname");
-            string city = ExcelReader.ReadData(dataFilePath, "Purchase", 0, "City");
-            string total = ExcelReader.ReadData(dataFilePath, "Purchase", 0, "Total");
+            string fname = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "Fname");
+            string lname = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "Lname");
+            string city = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "City");
+            string total = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "Total");
             Console.WriteLine($"{fname} {lname} from {city} has spend {total}");
             Assert.AreEqual("David", fname, $"First name is not correct: Expected: David, Actual: {fname}");
             Assert.AreEqual("Copper Field", lname, $"Last name is not correct: Expected: Copper Field, Actual: {lname}");

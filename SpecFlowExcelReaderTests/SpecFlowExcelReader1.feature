@@ -10,7 +10,7 @@ Scenario: Read a column data from excel sheet
 
 	Examples:
 	| fileName        | sheetName | rowNumber | columnName | result       |
-	| TestExcel1.xlsx | Purchase  | 0         | Fname      | David        |
-	| TestExcel1.xlsx | Purchase  | 0         | Lname      | Copper Field |
-	| TestExcel1.xlsx | Purchase  | 0         | City       | New York     |
-	| TestExcel1.xlsx | Purchase  | 0         | Total      | 1100         |
+	| TestExcel1.xlsx | Purchase  | 1         | Fname      | David        |
+	| TestExcel1.xlsx | Purchase  | 1         | Lname      | Copper Field |
+	| TestExcel1.xlsx | Purchase  | 1         | City       | New York     |
+	| TestExcel1.xlsx | Purchase  | 1         | Total      | 1100         |

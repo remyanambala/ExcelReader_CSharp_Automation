@@ -16,10 +16,10 @@ namespace ExcelReaderMSTests
         public void TestReadValueFromExcel1Withoutload()
         {
             //ExcelReader.OpenExcel(dataFilePath);
-            string fname = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "Fname");
-            string lname = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "Lname");
-            string city = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "City");
-            string total = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "Total");
+            string fname = ExcelReader.ReadData(dataFilePath, "Purchase", 2, "Fname");
+            string lname = ExcelReader.ReadData(dataFilePath, "Purchase", 2, "Lname");
+            string city = ExcelReader.ReadData(dataFilePath, "Purchase", 2, "City");
+            string total = ExcelReader.ReadData(dataFilePath, "Purchase", 2, "Total");
             Console.WriteLine($"{fname} {lname} from {city} has spend {total}");
          }
        
