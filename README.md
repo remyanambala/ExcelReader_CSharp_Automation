@@ -25,7 +25,7 @@ Azure devops continuous integration pipeline can be found under below location. 
 https://dev.azure.com/remyanambala/ExcelReader/    
 
 Specflow results:   
-https://github.com/remyanambala/ExcelReader_CSharp_Automation/blob/master/Resources/Specflow.png
+<img src="https://github.com/remyanambala/ExcelReader_CSharp_Automation/blob/master/Resources/Specflow.png">
 
 MSTest results:  
-https://github.com/remyanambala/ExcelReader_CSharp_Automation/blob/master/Resources/MStest_results.jpg
+<img src="https://github.com/remyanambala/ExcelReader_CSharp_Automation/blob/master/Resources/MStest_results.jpg">
