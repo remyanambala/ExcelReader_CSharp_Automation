@@ -10,13 +10,17 @@ namespace ExcelReaderMSTests
     {
         public string buildLoc = System.IO.Path.GetDirectoryName(new System.Uri(System.Reflection.Assembly.GetExecutingAssembly().CodeBase).LocalPath);
         public String dataFilePath;
-
+        [TestInitialize]
+        public void TestInitializeFn()
+        {
+            dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"TestFiles\", "TestExcel1.xlsx"));
+            ExcelReader.Load(dataFilePath, "myPwd");
+        }
 
         [TestMethod]
         public void TestReadValueFromExcel1()
         {
-            dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"TestFiles\", "TestExcel1.xlsx"));
-            ExcelReader.Load(dataFilePath,"myPwd");
+           
             string fname = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "Fname");
             string lname = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "Lname");
             string city = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "City");
@@ -55,8 +59,7 @@ namespace ExcelReaderMSTests
         [TestMethod]
         public void TestNegativeSheetNotExist()
         {
-            dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"TestFiles\", "TestExcel1.xlsx"));
-            ExcelReader.Load(dataFilePath,"myPwd");
+           
             string fname = ExcelReader.ReadData(dataFilePath, "Expense", 1, "Fname","myPwd");
             Console.WriteLine($"{fname}");
             Assert.AreEqual(null, fname, $"First name is not correct: Expected: null, Actual: {fname}");
@@ -65,9 +68,7 @@ namespace ExcelReaderMSTests
         [TestMethod]
         public void TestReadValueFromSheet2()
         {
-            dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"TestFiles\", "TestExcel1.xlsx"));
-            ExcelReader.Load(dataFilePath, "myPwd");
-            string fname = ExcelReader.ReadData(dataFilePath, "Returns", 1, "Fname");
+              string fname = ExcelReader.ReadData(dataFilePath, "Returns", 1, "Fname");
             string lname = ExcelReader.ReadData(dataFilePath, "Returns", 1, "Lname");
             string city = ExcelReader.ReadData(dataFilePath, "Returns", 1, "City");
             string total = ExcelReader.ReadData(dataFilePath, "Returns", 1, "Total");
