@@ -1,6 +1,6 @@
 # ExcelReader_CSharp_Automation
               
-A library built based on the C# ExcelDataReader that can used for reading data from excel for test automation. This loads the excel and its sheets into a static class which can be shared by multiple automation test scripts. It supports loading mutliple excel files.    
+A library built based on the C# ExcelDataReader that can be used for reading data from excel for test automation. This library loads the excel and its sheets into a static class which can be shared by multiple automation test scripts. It supports loading mutliple excel files.    
 ExcelDataReader - https://github.com/ExcelDataReader/ExcelDataReader
 
 Excel file format: .xlsx    
@@ -21,7 +21,7 @@ Project includes unit tests for the library created using MSTest and Specflow.
 ExcelReaderMSTests => MS Test unit tests    
 SpecFlowExcelReaderTests => Specflow (BDD) unit tests
 
-Azure devops continuous integration pipeline can be found under below location. The build pipeline in turn triggers the release flow where unit tests  - both MS test and Spec flow are run.:  
+Azure devops continuous integration pipeline can be found under below location. The build pipeline triggers the release flow where unit tests  - both MS test and Spec flow are run.:  
 https://dev.azure.com/remyanambala/ExcelReader/    
 
 Specflow results:   
