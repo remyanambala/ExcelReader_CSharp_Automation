@@ -21,7 +21,7 @@ Project includes unit tests for the library created using MSTest and Specflow.
 ExcelReaderMSTests => MS Test unit tests    
 SpecFlowExcelReaderTests => Specflow (BDD) unit tests
 
-Azure devops continuous integration pipeline can be found under below location. The build pipeline triggers the release flow where unit tests  - both MS test and Spec flow are run.:  
+Azure devops continuous integration (CI/CD) pipeline can be found under below location. The build pipeline triggers the release flow where unit tests  - both MS test and Spec flow are run.:  
 https://dev.azure.com/remyanambala/ExcelReader/    
 
 Specflow results:   
