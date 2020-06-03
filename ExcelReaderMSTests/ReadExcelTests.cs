@@ -56,7 +56,7 @@ namespace ExcelReaderMSTests
         public void TestNegativeSheetNotExist()
         {
             dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"TestFiles\", "TestExcel1.xlsx"));
-           // ExcelReader.Load(dataFilePath);
+            ExcelReader.Load(dataFilePath,"myPwd");
             string fname = ExcelReader.ReadData(dataFilePath, "Expense", 1, "Fname","myPwd");
             Console.WriteLine($"{fname}");
             Assert.AreEqual(null, fname, $"First name is not correct: Expected: null, Actual: {fname}");
