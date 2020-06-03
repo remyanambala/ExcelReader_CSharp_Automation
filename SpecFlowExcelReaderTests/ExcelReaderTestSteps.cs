@@ -12,13 +12,13 @@ namespace SpecFlowExcelReaderTests
         string result;
         string buildLoc = System.IO.Path.GetDirectoryName(new System.Uri(System.Reflection.Assembly.GetExecutingAssembly().CodeBase).LocalPath);
         string dataFilePath;
-       [Given(@"I have loaded the excel using (.*)")]
-        public void GivenIHaveLoadedTheExcelUsing(string fileName)
+       [Given(@"I have loaded the excel using (.*) and (.*)")]
+        public void GivenIHaveLoadedTheExcelUsingAnd(string fileName, string pwd = null)
         {
             //ScenarioContext.Current.Pending();
             
             dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"..\..\..\TestFiles\", fileName));
-            ExcelReader.Load(dataFilePath);
+            ExcelReader.Load(dataFilePath, pwd);
         }
 
         [When(@"I pass (.*) and (.*) and (.*) to read")]

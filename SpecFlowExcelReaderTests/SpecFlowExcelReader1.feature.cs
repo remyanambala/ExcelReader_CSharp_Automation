@@ -19,8 +19,8 @@ namespace SpecFlowExcelReaderTests
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("ExcelReader", Description="\tAs an user\r\n\tI want to read data from a excel sheet", SourceFile="SpecFlowExcelReader1.feature", SourceLine=0)]
-    public partial class ExcelReaderFeature
+    [TechTalk.SpecRun.FeatureAttribute("ExcelReaderSpecFlow", Description="\tAs an user\r\n\tI want to read data from a excel sheet", SourceFile="SpecFlowExcelReader1.feature", SourceLine=0)]
+    public partial class ExcelReaderSpecFlowFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -34,7 +34,7 @@ namespace SpecFlowExcelReaderTests
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ExcelReader", "\tAs an user\r\n\tI want to read data from a excel sheet", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ExcelReaderSpecFlow", "\tAs an user\r\n\tI want to read data from a excel sheet", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -70,7 +70,7 @@ namespace SpecFlowExcelReaderTests
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void ReadAColumnDataFromExcelSheet(string fileName, string sheetName, string rowNumber, string columnName, string result, string[] exampleTags)
+        public virtual void ReadAColumnDataFromExcelSheet(string fileName, string sheetName, string rowNumber, string columnName, string result, string pwd, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "mytag"};
@@ -101,7 +101,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
- testRunner.Given(string.Format("I have loaded the excel using {0}", fileName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("I have loaded the excel using {0} and {1}", fileName, pwd), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
  testRunner.When(string.Format("I pass {0} and {1} and {2} to read", sheetName, rowNumber, columnName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -118,7 +118,7 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void ReadAColumnDataFromExcelSheet_Variant0()
         {
 #line 6
-this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "1", "Fname", "David", ((string[])(null)));
+this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "1", "Fname", "David", "myPwd", ((string[])(null)));
 #line hidden
         }
         
@@ -127,7 +127,7 @@ this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "1", "Fname", 
         public virtual void ReadAColumnDataFromExcelSheet_Variant1()
         {
 #line 6
-this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "1", "Lname", "Copper Field", ((string[])(null)));
+this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "1", "Lname", "Copper Field", "myPwd", ((string[])(null)));
 #line hidden
         }
         
@@ -136,7 +136,7 @@ this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "1", "Lname", 
         public virtual void ReadAColumnDataFromExcelSheet_Variant2()
         {
 #line 6
-this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "1", "City", "New York", ((string[])(null)));
+this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "1", "City", "New York", "myPwd", ((string[])(null)));
 #line hidden
         }
         
@@ -145,7 +145,25 @@ this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "1", "City", "
         public virtual void ReadAColumnDataFromExcelSheet_Variant3()
         {
 #line 6
-this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "1", "Total", "1100", ((string[])(null)));
+this.ReadAColumnDataFromExcelSheet("TestExcel1.xlsx", "Purchase", "1", "Total", "1100", "myPwd", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Read a column data from excel sheet, Variant 4", new string[] {
+                "mytag"}, SourceLine=12)]
+        public virtual void ReadAColumnDataFromExcelSheet_Variant4()
+        {
+#line 6
+this.ReadAColumnDataFromExcelSheet("TestExcel2.xlsx", "Vehicles", "1", "Vehicle", "car", "", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Read a column data from excel sheet, Variant 5", new string[] {
+                "mytag"}, SourceLine=12)]
+        public virtual void ReadAColumnDataFromExcelSheet_Variant5()
+        {
+#line 6
+this.ReadAColumnDataFromExcelSheet("TestExcel2.xlsx", "Vehicles", "1", "Wheels", "4", "", ((string[])(null)));
 #line hidden
         }
         

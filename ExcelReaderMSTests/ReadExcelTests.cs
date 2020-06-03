@@ -16,7 +16,7 @@ namespace ExcelReaderMSTests
         public void TestReadValueFromExcel1()
         {
             dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"..\..\..\TestFiles\", "TestExcel1.xlsx"));
-            ExcelReader.Load(dataFilePath);
+            ExcelReader.Load(dataFilePath,"myPwd");
             string fname = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "Fname");
             string lname = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "Lname");
             string city = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "City");
@@ -32,13 +32,34 @@ namespace ExcelReaderMSTests
         public void TestLoadDuringCountAndLoop()
         {
             dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"..\..\..\TestFiles\", "TestExcel2.xlsx"));
-            int rowCount = ExcelReader.GetRowCount(dataFilePath, "Vehicles", "Vehicle");
-            for (int row = 0; row <= rowCount-1; row++) 
+            int rowCount = ExcelReader.GetRowCount(dataFilePath, "Vehicles");
+            for (int row = 1; row <= rowCount; row++) 
              { 
                 string vName = ExcelReader.ReadData(dataFilePath, "Vehicles", row, "Vehicle");
                 string wheels = ExcelReader.ReadData(dataFilePath, "Vehicles", row, "wheels");
                 Console.WriteLine($"{vName} have {wheels} wheels");
             }
+
+        }
+        [TestMethod]
+        public void TestNegativeExcelNotExist()
+        {
+            dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"..\..\..\TestFiles\", "TestExcel3.xlsx"));
+            ExcelReader.Load(dataFilePath);
+            string fname = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "Fname");
+             Console.WriteLine($"{fname}");
+            Assert.AreEqual(null, fname, $"First name is not correct: Expected: null, Actual: {fname}");
+           
+        }
+
+        [TestMethod]
+        public void TestNegativeSheetNotExist()
+        {
+            dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"..\..\..\TestFiles\", "TestExcel1.xlsx"));
+           // ExcelReader.Load(dataFilePath);
+            string fname = ExcelReader.ReadData(dataFilePath, "Expense", 1, "Fname","myPwd");
+            Console.WriteLine($"{fname}");
+            Assert.AreEqual(null, fname, $"First name is not correct: Expected: null, Actual: {fname}");
 
         }
     }
