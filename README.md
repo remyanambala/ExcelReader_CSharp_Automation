@@ -29,3 +29,7 @@ Specflow results:
 
 MSTest results:  
 <img src="https://github.com/remyanambala/ExcelReader_CSharp_Automation/blob/master/Resources/MStest_results.jpg">
+
+How to use this in selenium scripts:
+Below is a screenshot of using in in Easy Repro - MS Dynamics 365 Selenium automation framework.
+<img src="https://github.com/remyanambala/ExcelReader_CSharp_Automation/blob/master/Resources/SeleniumScript.jpg">
