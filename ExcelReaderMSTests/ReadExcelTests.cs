@@ -62,5 +62,21 @@ namespace ExcelReaderMSTests
             Assert.AreEqual(null, fname, $"First name is not correct: Expected: null, Actual: {fname}");
 
         }
+        [TestMethod]
+        public void TestReadValueFromSheet2()
+        {
+            dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"TestFiles\", "TestExcel1.xlsx"));
+            ExcelReader.Load(dataFilePath, "myPwd");
+            string fname = ExcelReader.ReadData(dataFilePath, "Returns", 1, "Fname");
+            string lname = ExcelReader.ReadData(dataFilePath, "Returns", 1, "Lname");
+            string city = ExcelReader.ReadData(dataFilePath, "Returns", 1, "City");
+            string total = ExcelReader.ReadData(dataFilePath, "Returns", 1, "Total");
+            Console.WriteLine($"{fname} {lname} from {city} has spend {total}");
+            Assert.AreEqual("David", fname, $"First name is not correct: Expected: David, Actual: {fname}");
+            Assert.AreEqual("Copper Field", lname, $"Last name is not correct: Expected: Copper Field, Actual: {lname}");
+            Assert.AreEqual("New York", city, $"City name is not correct: Expected: New York, Actual: {city}");
+            Assert.AreEqual("55", total, $"Total is not correct: Expected: 55, Actual: {total}");
+
+        }
     }
 }
