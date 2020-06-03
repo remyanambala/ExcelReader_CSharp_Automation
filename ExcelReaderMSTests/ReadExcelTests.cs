@@ -68,7 +68,7 @@ namespace ExcelReaderMSTests
         [TestMethod]
         public void TestReadValueFromSheet2()
         {
-              string fname = ExcelReader.ReadData(dataFilePath, "Returns", 1, "Fname");
+            string fname = ExcelReader.ReadData(dataFilePath, "Returns", 1, "Fname");
             string lname = ExcelReader.ReadData(dataFilePath, "Returns", 1, "Lname");
             string city = ExcelReader.ReadData(dataFilePath, "Returns", 1, "City");
             string total = ExcelReader.ReadData(dataFilePath, "Returns", 1, "Total");
