@@ -9,7 +9,7 @@ namespace ExcelReaderMSTests
     public class ExcelReaderMSTestsWithoutLoad
     {
         public static string buildLoc = System.IO.Path.GetDirectoryName(new System.Uri(System.Reflection.Assembly.GetExecutingAssembly().CodeBase).LocalPath);
-        public static readonly String dataFilePath = Path.GetFullPath(Path.Combine( buildLoc, @"..\..\..\TestFiles\", "TestExcel1.xlsx"));
+        public static readonly String dataFilePath = Path.GetFullPath(Path.Combine( buildLoc, @"TestFiles\", "TestExcel1.xlsx"));
       
 
         [TestMethod]

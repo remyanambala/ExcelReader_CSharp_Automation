@@ -15,7 +15,7 @@ namespace ExcelReaderMSTests
         [TestMethod]
         public void TestReadValueFromExcel1()
         {
-            dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"..\..\..\TestFiles\", "TestExcel1.xlsx"));
+            dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"TestFiles\", "TestExcel1.xlsx"));
             ExcelReader.Load(dataFilePath,"myPwd");
             string fname = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "Fname");
             string lname = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "Lname");
@@ -31,7 +31,7 @@ namespace ExcelReaderMSTests
         [TestMethod]
         public void TestLoadDuringCountAndLoop()
         {
-            dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"..\..\..\TestFiles\", "TestExcel2.xlsx"));
+            dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"TestFiles\", "TestExcel2.xlsx"));
             int rowCount = ExcelReader.GetRowCount(dataFilePath, "Vehicles");
             for (int row = 1; row <= rowCount; row++) 
              { 
@@ -44,7 +44,7 @@ namespace ExcelReaderMSTests
         [TestMethod]
         public void TestNegativeExcelNotExist()
         {
-            dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"..\..\..\TestFiles\", "TestExcel3.xlsx"));
+            dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"TestFiles\", "TestExcel3.xlsx"));
             ExcelReader.Load(dataFilePath);
             string fname = ExcelReader.ReadData(dataFilePath, "Purchase", 1, "Fname");
              Console.WriteLine($"{fname}");
@@ -55,7 +55,7 @@ namespace ExcelReaderMSTests
         [TestMethod]
         public void TestNegativeSheetNotExist()
         {
-            dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"..\..\..\TestFiles\", "TestExcel1.xlsx"));
+            dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"TestFiles\", "TestExcel1.xlsx"));
            // ExcelReader.Load(dataFilePath);
             string fname = ExcelReader.ReadData(dataFilePath, "Expense", 1, "Fname","myPwd");
             Console.WriteLine($"{fname}");

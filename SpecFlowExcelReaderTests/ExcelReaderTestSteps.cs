@@ -17,7 +17,7 @@ namespace SpecFlowExcelReaderTests
         {
             //ScenarioContext.Current.Pending();
             
-            dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"..\..\..\TestFiles\", fileName));
+            dataFilePath = Path.GetFullPath(Path.Combine(buildLoc, @"TestFiles\", fileName));
             ExcelReader.Load(dataFilePath, pwd);
         }
 
