@@ -112,17 +112,18 @@ namespace Remya.ExcelReader
                 //Load the file if it doesn't exist already
                 if (!_cache.ContainsKey(filepath))
                 {
-                    if (File.Exists(filepath))
-                    {
-                        Load(filepath, pwd);
-                        //First data row corresponds to index 0, to get row 1, do rowNumber -1
-                        //Retrieving Data 
-                        string data = _cache[filepath].sheetData[sheetName].Rows[rowNumber - 1][columnName].ToString();
+                    return null;
+                    //if (File.Exists(filepath))
+                    //{
+                    //    Load(filepath, pwd);
+                    //    //First data row corresponds to index 0, to get row 1, do rowNumber -1
+                    //    //Retrieving Data 
+                    //    string data = _cache[filepath].sheetData[sheetName].Rows[rowNumber - 1][columnName].ToString();
 
-                        return data;
-                    }
-                    else
-                    { return null; }
+                    //    return data;
+                    //}
+                    //else
+                    //{ return null; }
 
                 }
                 else
