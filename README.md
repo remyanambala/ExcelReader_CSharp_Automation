@@ -21,7 +21,7 @@ Project includes unit tests for the library created using MSTest and Specflow.
 ExcelReaderMSTests => MS Test unit tests    
 SpecFlowExcelReaderTests => Specflow (BDD) unit tests
 
-Azure devops continuous integration pipeline can be found under below location. The build pipeline triggers the release flow where unit tests  - both MS test and Spec flow are run.:  
+Azure devops continuous integration (CI/CD) pipeline can be found under below location. The build pipeline triggers the release flow where unit tests  - both MS test and Spec flow are run.:  
 https://dev.azure.com/remyanambala/ExcelReader/    
 
 Specflow results:   
@@ -31,5 +31,5 @@ MSTest results:
 <img src="https://github.com/remyanambala/ExcelReader_CSharp_Automation/blob/master/Resources/MStest_results.jpg">
 
 How to use this in selenium scripts:   
-Below is a screenshot of using it in Easy Repro - MS Dynamics 365 Selenium automation framework.
+Below is a screenshot of using it in Easy Repro - MS Dynamics 365 Selenium test automation framework.
 <img src="https://github.com/remyanambala/ExcelReader_CSharp_Automation/blob/master/Resources/SeleniumScript.jpg">
