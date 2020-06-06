@@ -106,14 +106,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExcelReaderTestSteps.cs" />
+    <Compile Include="ClassFiles\TestReadDataFromExcel1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="runtests.cmd" />
-    <None Include="SpecFlowExcelReader1.feature" />
+    <None Include="FeatureFiles\TestReadDataFromExcel1.feature" />
     <None Include="SpecRunTestProfile.xsd">
       <SubType>Designer</SubType>
     </None>
