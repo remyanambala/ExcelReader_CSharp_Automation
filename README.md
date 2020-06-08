@@ -1,6 +1,6 @@
 # ExcelReader_CSharp_Automation
               
-A library built based on the C# ExcelDataReader that can be used for reading data from excel for test automation. This library loads the excel and its sheets into a static class which can be shared by multiple automation test scripts. It supports loading mutliple excel files.    
+A library built based on the C# ExcelDataReader that can be used for reading data from excel for test automation. This library loads the excel and its sheets into a static class which can be shared by multiple automation test scripts. It supports loading multiple excel files.    
 ExcelDataReader - https://github.com/ExcelDataReader/ExcelDataReader
 
 Excel file format: .xlsx    
