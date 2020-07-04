@@ -2,7 +2,7 @@
 	As an user
 	I want to read data from a excel sheet
 
-@mytag
+@Test read data from excel
 Scenario: Read a column data from excel sheet
 	Given I have loaded the excel using <fileName> and <pwd>
 	When I pass <sheetName> and <rowNumber> and <columnName> to read
